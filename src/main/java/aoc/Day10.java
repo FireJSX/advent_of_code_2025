@@ -9,7 +9,6 @@ public class Day10 {
     private static final Pattern LINE_P = Pattern.compile("^\\s*\\[([^\\]]+)]\\s*(.*)$");
     private static final Pattern BTN_P  = Pattern.compile("\\(([^)]*)\\)");
     private static final Pattern CURLY_P = Pattern.compile("\\{.*}$");
-
     public static long part1(String input) {
         List<String> lines = new ArrayList<>(Util.lines(input));
         while (!lines.isEmpty() && lines.get(lines.size() - 1).isEmpty()) lines.remove(lines.size() - 1);
@@ -21,10 +20,6 @@ public class Day10 {
             sum += solveOneMachineMinPresses(line);
         }
         return sum;
-    }
-
-    public static long part2(String input) {
-        throw new UnsupportedOperationException("Day10 Part 2 not implemented yet.");
     }
 
     private static int solveOneMachineMinPresses(String line) {
